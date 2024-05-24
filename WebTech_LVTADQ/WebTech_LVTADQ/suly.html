@@ -9,6 +9,14 @@
     <title>Súlyzós edzések</title>
 
     <style>
+            <style>
+        .workout-list li {
+            margin-bottom: 15px;
+        }
+        .video-container {
+            margin-top: 20px;
+        }
+        
 
         img{
             display: block;
@@ -19,6 +27,7 @@
             h1{
             text-align: center;
             float: middle;
+            color: white;
             
         }
 
@@ -39,7 +48,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f0f0f0;
+          
         }
         .container {
             max-width: 600px;
@@ -51,6 +60,7 @@
         }
         h2 {
             color: #007BFF;
+            text-align: center;
         }
         .workout {
             margin-bottom: 20px;
@@ -67,49 +77,62 @@
 
 </head>
 
-<body style="background-color: lightgray;">
+<body style="background-image: url('sulyzo.jpg');">
 
     <table style="width: 100%;">
-
         <tr>
-    <td> <img style="width: 180px; height: 180px" src="suly.jpg"> </td>
+            <td><a href="LVTADQ_1.html";><img class="bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a></td>
+           
     <td>    <h1>Súlyzós edzések</h1> </td>
-    <td> <img style="width: 180px; height: 180px" src="suly.jpg"> </td>
+    <td><a href="kaloria.html";><img class="jobb" src="jobb.jpg" title="Tovább a Kalória kalkulátorhoz"></a></td>
         </tr>
 </table>
 
+
+
+
 <div class="container">
-    <h2>Súlyzós Edzések Típusai</h2>
+    <h2><u>Súlyzós Edzések Típusai</u></h2>
 
-    <div class="workout">
-        <h3>Guggolás</h3>
-        <p>A guggolás az egyik alapvető összetett gyakorlat, amely a combokat, a feneket és a törzset erősíti. Kiválóan fejleszti az alsótest izmait.</p>
-    </div>
+    <ul class="workout-list">
+        <li>
+            <h3><a href="#" onclick="loadVideo('guggolas.mp4')">Guggolás</a></h3>
+            <p>A guggolás az egyik alapvető összetett gyakorlat, amely a combokat, a feneket és a törzset erősíti. Kiválóan fejleszti az alsótest izmait.</p>
+        </li>
+        <li>
+            <h3><a href="#" onclick="loadVideo('fekvenyomas.mp4')">Fekvenyomás</a></h3>
+            <p>A fekvenyomás az egyik legfontosabb felsőtest gyakorlat, amely a mellizmokat, a vállakat és a tricepszeket dolgoztatja meg.</p>
+        </li>
+        <li>
+            <h3><a href="#" onclick="loadVideo('felhuzas.mp4')">Felhúzás</a></h3>
+            <p>A felhúzás egy összetett gyakorlat, amely a hát, a lábak és a törzs izmait célozza meg. Nagyon hatékony az erő és az izomtömeg növelésére.</p>
+        </li>
+        <li>
+            <h3><a href="#" onclick="loadVideo('bicepsz_hajlitas.mp4')">Bicepsz hajlítás</a></h3>
+            <p>A bicepsz hajlítás egy izolációs gyakorlat, amely a bicepsz izmokat erősíti. Kiváló választás a karok formálására és erősítésére.</p>
+        </li>
+        <li>
+            <h3><a href="#" onclick="loadVideo('vallnyomas.mp4')">Vállnyomás</a></h3>
+            <p>A vállnyomás (military press) a vállak és a tricepsz izmait dolgoztatja meg. Hatékonyan fejleszti a vállak erejét és méretét.</p>
+        </li>
+    </ul>
 
-    <div class="workout">
-        <h3>Fekvenyomás</h3>
-        <p>A fekvenyomás az egyik legfontosabb felsőtest gyakorlat, amely a mellizmokat, a vállakat és a tricepszeket dolgoztatja meg.</p>
+    <div class="video-container">
+        <video id="workoutVideo" width="600" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-
-    <div class="workout">
-        <h3>Felhúzás</h3>
-        <p>A felhúzás egy összetett gyakorlat, amely a hát, a lábak és a törzs izmait célozza meg. Nagyon hatékony az erő és az izomtömeg növelésére.</p>
-    </div>
-
-    <div class="workout">
-        <h3>Bicepsz hajlítás</h3>
-        <p>A bicepsz hajlítás egy izolációs gyakorlat, amely a bicepsz izmokat erősíti. Kiváló választás a karok formálására és erősítésére.</p>
-    </div>
-
-    <div class="workout">
-        <h3>Vállnyomás</h3>
-        <p>A vállnyomás (military press) a vállak és a tricepsz izmait dolgoztatja meg. Hatékonyan fejleszti a vállak erejét és méretét.</p>
-    </div>
-    
 </div>
 
-<a href="LVTADQ_1.html";><img class="bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a>
-<a href="kaloria.html";><img class="jobb" src="jobb.jpg" title="Kalória kalkulátorhoz"></a>
+<script>
+    function loadVideo(videoFile) {
+        document.getElementById('workoutVideo').src = videoFile;
+    }
+</script>
+
+
+
 
 </body>
 

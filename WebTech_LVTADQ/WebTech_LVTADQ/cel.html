@@ -19,6 +19,7 @@
             h1{
             text-align: center;
             float: middle;
+            color: white;
             
         }
 
@@ -79,25 +80,29 @@
 
 </head>
 
-<body style="background-color: lightgray;">
+<body style="background-image: url('sulyzo.jpg');">
 
     <table style="width: 100%;">
-
         <tr>
-    <td> <img style="width: 180px; height: 180px" src="cel.jpg"> </td>
+            <td><a href="LVTADQ_1.html";><img class="bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a></td>
+           
     <td>    <h1>Cél kiválasztása</h1> </td>
-    <td> <img style="width: 180px; height: 180px" src="cel.jpg"> </td>
+    <td><a href="kardio.html";><img class="jobb" src="jobb.jpg" title="Tovább a kardió edzésekhez"></a></td>
         </tr>
 </table>
 
 <div class="container">
     <h2>Edzés Ajánló</h2>
     <div class="form-group">
-        <label for="goal">Válaszd ki az elérni kívánt célt:</label>
-        <select id="goal">
-            <option value="fogyas">Fogyás</option>
-            <option value="izmosodas">Izmosodás</option>
-        </select>
+        <label>Válaszd ki az elérni kívánt célt:</label>
+        <div>
+            <input type="radio" id="fogyas" name="goal" value="fogyas">
+            <label for="fogyas">Fogyás</label>
+        </div>
+        <div>
+            <input type="radio" id="izmosodas" name="goal" value="izmosodas">
+            <label for="izmosodas">Izmosodás</label>
+        </div>
     </div>
     <button onclick="showWorkouts()">Ajánlott Edzések</button>
     <div class="result" id="result"></div>
@@ -105,55 +110,35 @@
 
 <script>
     function showWorkouts() {
-        var goal = document.getElementById('goal').value;
+        var goal = document.querySelector('input[name="goal"]:checked').value;
         var resultDiv = document.getElementById('result');
         resultDiv.innerHTML = '';  // Clear previous results
 
         if (goal === 'fogyas') {
             resultDiv.innerHTML = `
                 <h3>Ajánlott Kardió Edzések</h3>
-                <div class="workout">
-                    <h3> <a href="kardio.html">Futás</a></h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="kardio.html">Biciklizés </a> </h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="kardio.html">Úszás </a> </h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="kardio.html">Elliptikus tréner </a> </h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="kardio.html">HIIT (High-Intensity Interval Training) </a> </h3>
-                </div>
+                <ol>
+                    <li><a href="kardio.html">Futás</a></li>
+                    <li><a href="kardio.html">Biciklizés</a></li>
+                    <li><a href="kardio.html">Úszás</a></li>
+                    <li><a href="kardio.html">Elliptikus tréner</a></li>
+                    <li><a href="kardio.html">HIIT (High-Intensity Interval Training)</a></li>
+                </ol>
             `;
         } else if (goal === 'izmosodas') {
             resultDiv.innerHTML = `
                 <h3>Ajánlott Súlyzós Edzések</h3>
-                <div class="workout">
-                    <h3> <a href="suly.html">Guggolás </a></h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="suly.html">Fekvenyomás </a></h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="suly.html">Felhúzás </a></h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="suly.html">Bicepsz hajlítás </al></h3>
-                </div>
-                <div class="workout">
-                    <h3> <a href="suly.html">Vállnyomás </a></h3>
-                </div>
+                <ol>
+                    <li><a href="suly.html">Guggolás</a></li>
+                    <li><a href="suly.html">Fekvenyomás</a></li>
+                    <li><a href="suly.html">Felhúzás</a></li>
+                    <li><a href="suly.html">Bicepsz hajlítás</a></li>
+                    <li><a href="suly.html">Vállnyomás</a></li>
+                </ol>
             `;
         }
     }
 </script>
-
-<a href="kardio.html";><img class="jobb" src="jobb.jpg" title="Tovább a Kardió edzésekhez"></a>
-<a href="LVTADQ_1.html";><img class="bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a>
-
 </body>
 
 </html>
