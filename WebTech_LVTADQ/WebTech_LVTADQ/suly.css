@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    color:white;
+}
+.workout-list li {
+    margin-bottom: 15px;
+}
+.video-container {
+    margin-top: 20px;
+}
+.nav-icon {
+    height: 30px;
+    width: 30px;
+}
+.bal {
+    float: left;
+}
+.jobb {
+    float: right;
+}

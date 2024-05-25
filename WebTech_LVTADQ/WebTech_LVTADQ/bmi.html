@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Kalkulátor</title>
+    <link rel="stylesheet" href="bmi.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            
+            background-image: url('sulyzo.jpg');
+            background-size: cover;
         }
         .container {
             max-width: 400px;
@@ -41,63 +43,44 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-
-        img{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            }
-
-            h1{
-            text-align: center;
-            float: middle;
-            color: white;
-            
-        }
-
-        .jobb{
-            height: 30px;
-            width: 30px;
-            float: right;
-        }
-
-        .bal{
-            height: 30px;
-            width: 30px;
-            float: left;
+    
     </style>
 </head>
-<body style="background-image: url('sulyzo.jpg')">
+<body>
 
-    <table style="width: 100%;">
-        <tr>
-            <td><a href="LVTADQ_1.html";><img class="bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a></td>
-           
-    <td>    <h1>BMI kalkulátor</h1> </td>
-    <td><a href="cel.html";><img class="jobb" src="jobb.jpg" title="Tovább a cél kiválasztásához"></a></td>
-        </tr>
-</table>
+<header>
+    <nav>
+        <table style="width: 100%;">
+            <tr>
+                <td><a href="LVTADQ_1.html"><img class="nav-icon bal" src="bal.jpg" title="Vissza a kezdőoldalra"></a></td>
+                <td><h1>BMI kalkulátor</h1></td>
+                <td><a href="cel.html"><img class="nav-icon jobb" src="jobb.jpg" title="Tovább a cél kiválasztásához"></a></td>
+            </tr>
+        </table>
+    </nav>
+</header>
 
-<div class="container">
-    <h2>BMI Kalkulátor</h2>
-    <div class="form-group">
-        <label for="height">Magasság (cm):</label>
-        <input type="number" id="height" required>
-    </div>
-    <div class="form-group">
-        <label for="weight">Súly (kg):</label>
-        <input type="number" id="weight" required>
-    </div>
-    <button onclick="calculateBMI()">Számítás</button>
-    <div class="result" id="result"></div>
-</div>
+<main>
+    <section class="container">
+        <article>
+            <h2 style="text-align: center;">BMI Kalkulátor</h2>
+            <div class="form-group">
+                <label for="height">Magasság (cm):</label>
+                <input type="number" id="height" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Súly (kg):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <button onclick="calculateBMI()">Számítás</button>
+            <div class="result" id="result"></div>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p style="text-align: center; color: white;">&copy; 2024 BMI Kalkulátor</p>
+</footer>
 
 <script>
     function calculateBMI() {
@@ -128,5 +111,4 @@
 </script>
 
 </body>
-
 </html>

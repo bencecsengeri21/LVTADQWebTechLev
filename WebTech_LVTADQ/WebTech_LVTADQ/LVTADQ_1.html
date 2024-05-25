@@ -1,125 +1,88 @@
-<html lang="hu">
 <!DOCTYPE html>
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alakformálás alapok</title>
-   
-
+    <link rel="stylesheet" href="LVTADQ_1.css">
     <style>
-
-        h1{
-            text-align: center;
-            float: middle;
-            color: white;
-            
-        }
-        
-        img{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        .center{
-            margin-left: auto;
-            margin-right: auto;
-            border-spacing: 30px;
-        }
-
-        .bmi{
+  
+        .bal {
             float: left;
-            text-align: center;
         }
-
-        .cel{
-            float: left;
-            text-align: center;
-        }
-
-        .kardio{
-            float: left;
-            text-align: center;
-        }
-
-        .suly{
-            float: left;
-            text-align: center;
-        }
-
-        .jobb{
-            height: 30px;
-            width: 30px;
+        .jobb {
             float: right;
         }
-
-        .bal{
-            height: 30px;
-            width: 30px;
-            float: left;
-
-    
-       
+        .card {
+            text-align: center;
+            vertical-align: top;
+            width: 600px;
+            background-color: lightgray;
+            margin: 15px auto;
+        }
+        .card img {
+            width: 150px;
+            height: 150px;
+        }
+        footer {
+            text-align: center;
+            margin: 20px;
+        }
     </style>
-
 </head>
+<body>
 
-<body style="background-image: url('sulyzo.jpg');">
+<header>
+    <nav>
+        <table style="width: 100%;">
+            <tr>
+                <td><a href="kaloria.html"><img class="nav-icon bal" src="bal.jpg" title="Vissza a kalória kalkulátorhoz"></a></td>
+                <td><h1>Alakformálás alapok</h1></td>
+                <td><a href="bmi.html"><img class="nav-icon jobb" src="jobb.jpg" title="Tovább a BMI kalkulátorhoz"></a></td>
+            </tr>
+        </table>
+    </nav>
+</header>
 
-    <table style="width: 100%;">
+<main>
+    <section class="center" style="width: 80%;">
+        <article class="card">
+            <h2><u>BMI kalkulátor</u></h2>
+            <img class="bmi" src="bmi.jpg" alt="BMI kalkulátor">
+            <p><a href="bmi.html">Ide kattintva</a> elérheti a BMI kalkulátort, ami megmutatja, hogy elhízottnak számítunk-e, vagy sem.</p>
+        </article>
+        <article class="card">
+            <h2><u>Cél kiválasztása</u></h2>
+            <img class="cel" src="cel.jpg" alt="Cél kiválasztása">
+            <p><a href="cel.html">Ide kattintva</a> elérheti a céljának megfelelő kiválasztását tartalmazó weblapot.</p>
+        </article>
+    </section>
 
-        <tr>
-            <td><a href="kaloria.html";><img class="bal" src="bal.jpg" title="Vissza a kalória kalkulátorhoz"></a></td>
-    <td>    <h1>Alakformálás alapok</h1> </td>
-    <td><a href="bmi.html";><img class="jobb" src="jobb.jpg" title="Tovább a BMI kalkulátorhoz"></a></td>
-        </tr>
-</table>
+    <section class="center" style="width: 80%;">
+        <article class="card">
+            <h2><u>Kalória számlálás</u></h2>
+            <img class="suly" src="kaloria.jpg" alt="Kalória számlálás">
+            <p><a href="kaloria.html">Ide kattintva</a> elérheti a kalória számlálást tartalmazó weblapot.</p>
+        </article>
+    </section>
 
-<br>
+    <section class="center" style="width: 80%;">
+        <article class="card">
+            <h2><u>Kardió edzések</u></h2>
+            <img class="kardio" src="kardio.jpg" alt="Kardió edzések">
+            <p><a href="kardio.html">Ide kattintva</a> elérheti a kardió edzéseket tartalmazó weblapot.</p>
+        </article>
+        <article class="card">
+            <h2><u>Súlyzós edzések</u></h2>
+            <img class="suly" src="suly.jpg" alt="Súlyzós edzések">
+            <p><a href="suly.html">Ide kattintva</a> elérheti a súlyzós edzéseket tartalmazó weblapot.</p>
+        </article>
+    </section>
+</main>
 
-
-<table class="center" style="width: 80%;">
-    <tr style="background-color: lightgray">
-        <td style="text-align: center; vertical-align: top; width: 600px"> <h2> BMI kalkulátor </h2>
-             <img class="bmi" style="width: 150px; height: 150px" src="bmi.jpg"> 
-             <p style="font-family: Arial, Helvetica, sans-serif;"> <a href="bmi.html">Ide kattintva</a> elérheti a BMI kalkulátort ami megmutatja, hogy elhízottnak számítunk e, vagy sem.</p>
-              </td>
-             
-
-        <td style="text-align: center; vertical-align: top; width: 600px"> <h2> Cél kiválasztása </h2>
-             <img class="cel" style="width: 150px; height: 150px" src="cel.jpg">
-            <p style="font-family: Arial, Helvetica, sans-serif;"> <a href="cel.html">Ide kattintva </a>elérheti a céljának megfelelő kiválasztását tartalmazó weblapot.</p>
-            </td>  
-    </tr>
-</table>
-
-<table style="margin:0px auto;background-color: lightyellow">
-    <tr style="background-color: lightgray">
-        <td style="text-align: center; vertical-align: top; width: 600px"> <h2>   Kalória számlálás </h2>
-            <img class="suly" style="width: 150px; height: 150px" src="kaloria.jpg">
-            <p style="font-family: Arial, Helvetica, sans-serif;"> <a href="kaloria.html">Ide kattintva</a> elérheti a kalória számlálást tartalmazó weblapot</p>
-           </td>
-    </tr>
-</table>
-
-<table class="center">
-    
-    <tr style="background-color: lightgray">
-        <td style="text-align: center; vertical-align: top; width: 600px"> <h2>   Kardió edzések </h2>
-             <img class="kardio" style="width: 150px; height: 150px" src="kardio.jpg"> 
-             <p style="font-family: Arial, Helvetica, sans-serif;"> <a href="kardio.html">Ide kattintva </a> elérheti a kardió edzéseket tartalmazó weblapot</p>
-            </td>
-
-        <td style="text-align: center; vertical-align: top; width: 600px"> <h2>   Súlyzós edzések </h2>
-             <img class="suly" style="width: 150px; height: 150px" src="suly.jpg">
-             <p style="font-family: Arial, Helvetica, sans-serif;"> <a href="suly.html">Ide kattintva</a> elérheti a kardió edzéseket tartalmazó weblapot</p>
-            </td>
-       
-    </tr>
-</table>
+<footer>
+    <p style="color:white">&copy; 2024 Alakformálás alapok</p>
+</footer>
 
 </body>
-
 </html>
