@@ -1,26 +1,32 @@
 button:hover {
-    background-color: #0056b3;
-}
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-}
+    background-color:#0056b3;
+             }
+
+.eredmeny {
+    margin-top:20px;
+    font-size:18px;
+          }
+
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
 h1 {
-    text-align: center;
-    color: white;
-}
-.nav-icon {
-    height: 30px;
-    width: 30px;
-}
+    text-align:center;
+    color:white;
+   }
+
+.nav-ikon {
+    height:30px;
+    width:30px;
+          }
+
 .bal {
-    float: left;
-}
+    float:left;
+     }
+
 .jobb {
-    float: right;
-}
+    float:right;
+      }
